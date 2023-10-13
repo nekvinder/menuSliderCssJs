@@ -1,0 +1,73 @@
+@i * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  background: rgb(2, 48, 71);
+}
+
+/* .menu{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+  overflow-y: scroll;
+} */
+
+.sidebar a {
+  color: rgb(212, 227, 241);
+  text-decoration: none;
+  padding: 10px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.sidebar a:hover {
+  background-color: rgba(5, 25, 42, 0.8);
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.fa-solid {
+  color: rgb(212, 227, 241);
+  text-decoration: none;
+  font-size: 12px;
+  padding: 4px;
+  justify-content: space-between;
+}
+
+.menu-item,
+.menu-item-has-children,
+.sub-menu {
+  padding: 3px;
+  display: inline-block;
+  width: 100%;
+}
+
+.sub-menu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: calc(-100% - 26px);
+  background: rgb(2, 48, 71);
+  display: none;
+}
+
+li.show-submenu > ul.sub-menu {
+  display: block;
+}
+/* .submenu-active .sub-menu{
+  transform: translateX(-100%);
+  transition: all 0.8s ease;
+} */
+
+.sub-menu .menu-item i {
+  margin-right: 10px;
+}
