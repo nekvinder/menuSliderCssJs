@@ -6,7 +6,7 @@
 }
 
 .sidebar {
-  position: fixed;
+  position: absolute;
   height: 100%;
   width: 300px;
   background: rgb(2, 48, 71);
@@ -45,8 +45,8 @@
 .menu-item,
 .menu-item-has-children,
 .sub-menu {
-  padding: 3px;
-  display: inline-block;
+  /* padding: 3px; */
+  display: block;
   width: 100%;
 }
 
@@ -55,19 +55,27 @@
   height: 100%;
   width: 100%;
   top: 0;
-  right: calc(-100% - 26px);
+  left: 300px;
   background: rgb(2, 48, 71);
-  display: none;
+  /* visibility: hidden; */
+  display: block;
+  transition: all 1s ease;
 }
 
 li.show-submenu > ul.sub-menu {
-  display: block;
+  visibility: visible;
+  transform: translateX(500px);
 }
-/* .submenu-active .sub-menu{
+
+li > ul > li.show-submenu > ul.sub-menu {
+  visibility: visible;
+  transform: translateX(300px);
+}
+
+.show-submenu-fly {
   transform: translateX(-100%);
-  transition: all 0.8s ease;
-} */
+}
 
 .sub-menu .menu-item i {
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }
